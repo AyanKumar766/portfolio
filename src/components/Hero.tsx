@@ -61,7 +61,7 @@ export const Hero = () => {
                 <h1 className="text-[15vw] leading-none font-black tracking-tighter select-none">
                     AYAN
                 </h1>
-                <div className="flex justify-between w-full px-2 mt-4 font-mono text-xs md:text-sm text-accent tracking-widest opacity-80">
+                <div className="flex justify-between w-full max-w-5xl mx-auto px-4 mt-4 font-mono text-xs md:text-sm text-accent tracking-widest opacity-80">
                     <span>AI ENGINEER</span>
                     <span>AVAILABLE FOR HIRE</span>
                 </div>
