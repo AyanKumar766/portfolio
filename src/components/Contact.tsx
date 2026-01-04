@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { ArrowUpRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { Section } from './Section';
 
