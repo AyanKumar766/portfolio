@@ -14,14 +14,35 @@ export const Contact = () => {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate network request
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+        try {
+            const formDataToSend = new FormData();
+            // Use environment variable for the key, fallback to hardcoded if needed (though env is set)
+            formDataToSend.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "3825446d-d67d-4ac5-bb49-22f501072ac4");
+            formDataToSend.append("name", formData.name);
+            formDataToSend.append("email", formData.email);
+            formDataToSend.append("message", formData.message);
 
-            // Reset status after a delay
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1500);
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataToSend
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                // Reset status after a delay
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                console.error("Submission failed:", data);
+                setStatus('idle');
+                // You might want to handle error state visibly in UI later
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            setStatus('idle');
+        }
     };
 
     return (
@@ -54,7 +75,7 @@ export const Contact = () => {
 
                             <div>
                                 <h3 className="font-mono text-xs mb-4 opacity-50">DIRECT EMAIL</h3>
-                                <a href="mailto:ayan.1236176@gmail.com" className="text-xl font-bold hover:text-accent transition-colors">ayan.1236176@gmail.com</a>
+                                <a href="mailto:exoticayann@gmail.com" className="text-xl font-bold hover:text-accent transition-colors">exoticayann@gmail.com</a>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ export const Footer = () => {
                     </div>
                     <div className="flex flex-col gap-2">
                         <span className="text-white">CONNECT</span>
-                        <a href="mailto:ayan.1236176@gmail.com" className="hover:text-accent transition-colors">EMAIL</a>
+                        <a href="mailto:exoticayann@gmail.com" className="hover:text-accent transition-colors">EMAIL</a>
                         <a href="https://github.com/AyanKumar766" className="hover:text-accent transition-colors">GITHUB</a>
                         <a href="https://www.linkedin.com/in/ayan-kumar-/" className="hover:text-accent transition-colors">LINKEDIN</a>
                     </div>
