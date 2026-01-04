@@ -78,7 +78,7 @@ function App() {
             <span className="font-mono text-accent text-xs mb-4 block">02 / EXPERIENCE</span>
             <h2 className="text-5xl md:text-8xl font-black tracking-tighter mb-16 leading-[0.9]">
               CAREER <br />
-              <span className="text-stroke text-transparent">TRAJECTORY</span>
+              <span className="text-stroke" style={{ WebkitTextFillColor: '#F2F2F2' }}>TRAJECTORY</span>
             </h2>
 
             <div className="flex flex-col items-end gap-12">

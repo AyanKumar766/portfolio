@@ -7,7 +7,7 @@ export const About = () => {
                 <span className="font-mono text-accent text-xs mb-4 block">00 / ABOUT</span>
                 <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-12 leading-[1.1]">
                     BUILDING THE <br />
-                    <span className="text-transparent text-stroke">INVISIBLE</span>
+                    <span className="text-stroke ">INVISIBLE</span>
                 </h2>
 
                 <div className="flex flex-col md:flex-row gap-12 md:gap-24">
