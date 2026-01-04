@@ -12,7 +12,7 @@ export const About = () => {
 
                 <div className="flex flex-col md:flex-row gap-12 md:gap-24">
                     <p className="text-xl md:text-2xl font-medium leading-relaxed max-w-2xl opacity-90">
-                        I am an <span className="text-accent">Ayan Kumar</span> ,a computer science student and software developer focused on building practical, privacy-aware, and user-centric applications. I enjoy solving real-world problems using full-stack development and AI, with a strong emphasis on clean code, thoughtful design, and continuous learning.
+                        Second-year B.Tech Computer Science student with strong foundations in Data Structures & Algorithms (200+ problems solved across Easy–Hard) and hands-on experience building AI and full stack applications. Currently working as an AI/ML Intern at ShadowFox, designing and optimizing machine learning pipelines.
                     </p>
 
                     <div className="flex flex-col gap-6 text-sm font-mono opacity-60">

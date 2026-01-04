@@ -5,6 +5,7 @@ import { Section } from './components/Section';
 import { Cube } from './components/Cube';
 import { Footer } from './components/Footer';
 import { About } from './components/About';
+import { Contact } from './components/Contact';
 
 function App() {
   return (
@@ -83,14 +84,38 @@ function App() {
             <div className="flex flex-col items-end gap-12">
               <div className="border-b border-black/20 pb-8 w-full md:w-2/3">
                 <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-2xl md:text-4xl font-bold">AI/ML INTERN</h3>
-                  <span className="font-mono text-accent">DEC 2025 - PRESENT</span>
+                  <h3 className="text-2xl md:text-3xl font-bold">CONTRIBUTOR</h3>
+                  <span className="font-mono text-accent">NOV 2025 - PRESENT</span>
+                </div>
+                <h4 className="text-xl mb-4 font-mono opacity-80">GITHUB</h4>
+                <ul className="text-lg opacity-70 list-disc list-inside space-y-2 text-left">
+                  <li>Actively contributing to open source projects.</li>
+                  <li>Building and maintaining personal projects in AI and Full Stack.</li>
+                </ul>
+              </div>
+
+              <div className="border-b border-black/20 pb-8 w-full md:w-2/3">
+                <div className="flex justify-between items-baseline mb-2">
+                  <h3 className="text-2xl md:text-3xl font-bold">AI/ML INTERN</h3>
+                  <span className="font-mono text-accent">DEC 2025 - JAN 2026</span>
                 </div>
                 <h4 className="text-xl mb-4 font-mono opacity-80">SHADOWFOX (REMOTE)</h4>
                 <ul className="text-lg opacity-70 list-disc list-inside space-y-2 text-left">
-                  <li>Designed optimization pipelines improving model accuracy by 20%.</li>
-                  <li>Integrated Google Gemini APIs for intelligent content generation.</li>
-                  <li>Collaborated on production-ready AI features.</li>
+                  <li>Designed and optimized end-to-end machine learning pipelines using Python and TensorFlow.</li>
+                  <li>Improved model accuracy and reliability by ~20%.</li>
+                  <li>Integrated Generative AI features using Google Gemini APIs.</li>
+                </ul>
+              </div>
+
+              <div className="border-b border-black/20 pb-8 w-full md:w-2/3">
+                <div className="flex justify-between items-baseline mb-2">
+                  <h3 className="text-2xl md:text-3xl font-bold">MEMBER</h3>
+                  <span className="font-mono text-accent">OCT 2025 - NOV 2025</span>
+                </div>
+                <h4 className="text-xl mb-4 font-mono opacity-80">GDGoC PUP (GDSC)</h4>
+                <ul className="text-lg opacity-70 list-disc list-inside space-y-2 text-left">
+                  <li>Participated in tech community events and workshops.</li>
+                  <li>Collaborated with peers on technical learning.</li>
                 </ul>
               </div>
             </div>
@@ -119,16 +144,17 @@ function App() {
               <div className="p-6 border border-white/10 hover:bg-white hover:text-black transition-colors duration-300">
                 <h3 className="font-mono text-accent mb-2">INTELLIGENCE</h3>
                 <h4 className="font-bold text-xl mb-2">AI / ML</h4>
-                <p className="opacity-60 text-sm">TensorFlow, Scikit-learn, OpenCV, Gemini APIs, LLMs</p>
+                <p className="opacity-60 text-sm">TensorFlow, Scikit-learn, Google Gemini, OpenCV, LLMs</p>
               </div>
               <div className="p-6 border border-white/10 hover:bg-white hover:text-black transition-colors duration-300">
                 <h3 className="font-mono text-accent mb-2">INFRA</h3>
                 <h4 className="font-bold text-xl mb-2">TOOLS & WEB</h4>
-                <p className="opacity-60 text-sm">React, Node.js, Git/GitHub, Linux, REST APIs, Vercel</p>
+                <p className="opacity-60 text-sm">React, Node.js, Tailwind CSS, Vercel V0, Git/GitHub, Linux</p>
               </div>
             </div>
           </div>
         </Section>
+        <Contact />
       </main>
 
       <Footer />

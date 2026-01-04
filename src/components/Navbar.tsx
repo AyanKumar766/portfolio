@@ -11,7 +11,7 @@ export const Navbar = () => {
         { number: '01', label: 'PROJECTS', href: '#projects' },
         { number: '02', label: 'EXPERIENCE', href: '#experience' },
         { number: '03', label: 'ARSENAL', href: '#arsenal' },
-        { number: '04', label: 'CONTACT', href: '#footer' },
+        { number: '04', label: 'CONTACT', href: '#contact' },
     ];
 
     return (
@@ -24,9 +24,7 @@ export const Navbar = () => {
                 >
                     <Menu size={24} />
                 </button>
-                <div className="font-mono text-xs md:text-sm text-neutral-500 bg-white/80 backdrop-blur px-2 py-1">
-                    STATUS: ONLINE
-                </div>
+
             </header>
 
             {/* Side Drawer */}
