@@ -10,14 +10,14 @@ export const Footer = () => {
                 <div className="flex gap-12">
                     <div className="flex flex-col gap-2">
                         <span className="text-white">PROJECTS</span>
-                        <a href="https://github.com/AyanKumar766/Silent-Guardian" className="hover:text-accent transition-colors">GUARDIAN</a>
+                        <a href="https://github.com/kumar-ayan/Silent-Guardian" className="hover:text-accent transition-colors">GUARDIAN</a>
                         <a href="#projects" className="hover:text-accent transition-colors">ASSISTANT</a>
                         <a href="#projects" className="hover:text-accent transition-colors">CLASSIFIER</a>
                     </div>
                     <div className="flex flex-col gap-2">
                         <span className="text-white">CONNECT</span>
                         <a href="mailto:exoticayann@gmail.com" className="hover:text-accent transition-colors">EMAIL</a>
-                        <a href="https://github.com/AyanKumar766" className="hover:text-accent transition-colors">GITHUB</a>
+                        <a href="https://github.com/kumar-ayan" className="hover:text-accent transition-colors">GITHUB</a>
                         <a href="https://www.linkedin.com/in/ayan-kumar-/" className="hover:text-accent transition-colors">LINKEDIN</a>
                     </div>
                 </div>

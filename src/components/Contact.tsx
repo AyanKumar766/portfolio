@@ -63,7 +63,7 @@ export const Contact = () => {
                                 <h3 className="font-mono text-xs mb-4 opacity-50">SOCIALS</h3>
                                 <div className="flex flex-col gap-2 text-xl font-bold">
                                     <a href="https://www.linkedin.com/in/ayan-kumar-/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors w-fit">LINKEDIN</a>
-                                    <a href="https://github.com/AyanKumar766" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors w-fit">GITHUB</a>
+                                    <a href="https://github.com/kumar-ayan" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors w-fit">GITHUB</a>
                                 </div>
                             </div>
 

@@ -75,7 +75,7 @@ Actively seeking **Software Engineering / AI / Research Internship opportunities
 ## 🚀 Local Development
 
 ```bash
-git clone https://github.com/AyanKumar766/portfolio.git
+git clone https://github.com/kumar-ayan/portfolio.git
 cd portfolio
 npm install
 npm run dev
