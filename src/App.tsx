@@ -45,16 +45,14 @@ function App() {
 
               <div className="group border-t border-white/20 pt-8">
                 <div className="flex justify-between items-baseline mb-4">
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">AI STUDY ASSISTANT</h3>
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">GITREE</h3>
                   <span className="font-mono text-xs text-accent">2025</span>
                 </div>
                 <p className="text-xl max-w-2xl opacity-70 mb-6">
-                  Full-stack learning platform summarizing academic content via LLM APIs. Optimized for low latency and smooth learning workflows.
+                  A CLI tool to provide LLM context for coding project files into single file with number of different formats to choose from.
                 </p>
                 <div className="flex gap-4 font-mono text-xs">
-                  <span className="border border-white px-2 py-1">REACT</span>
-                  <span className="border border-white px-2 py-1">LLM APIs</span>
-                  <span className="border border-white px-2 py-1">NODE.JS</span>
+                  <span className="border border-white px-2 py-1">PYTHON</span>
                 </div>
               </div>
 
