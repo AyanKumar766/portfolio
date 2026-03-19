@@ -7,7 +7,8 @@ import { Footer } from './components/Footer';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import LogoLoop from './components/LogoLoop';
-import { SiPython, SiCplusplus, SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiTailwindcss, SiGit, SiGoogle } from 'react-icons/si';
+import { SiPython, SiCplusplus, SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiTailwindcss, SiGit, SiGoogle, SiGithub } from 'react-icons/si';
+import { FiExternalLink } from 'react-icons/fi';
 
 function App() {
   return (
@@ -27,10 +28,60 @@ function App() {
               <span className="text-stroke text-white">WORKS</span>
             </h2>
 
+
+            <div className="group border-t border-white/20 pt-8">
+              <div className="flex justify-between items-baseline mb-4">
+                <div className="flex items-center gap-4">
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">LLMVC</h3>
+                  <a
+                    href="https://github.com/kumar-ayan/llmvc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/40 hover:text-accent transition-colors"
+                    title="View on GitHub"
+                  >
+                    <SiGithub className="text-2xl md:text-3xl" />
+                  </a>
+                </div>
+                <span className="font-mono text-xs text-accent">2026</span>
+              </div>
+              <p className="text-xl max-w-2xl opacity-70 mb-6">
+                Built a local-first CLI tool for LLM prompt version control with git-style versioning, word-level diff,and rollback — all stored on-device via SQLite
+              </p>
+              <div className="flex gap-4 font-mono text-xs">
+                <span className="border border-white px-2 py-1">TYPESCRIPT</span>
+                <span className="border border-white px-2 py-1">REACT</span>
+                <span className="border border-white px-2 py-1">NODEJS</span>
+                <span className="border border-white px-2 py-1">SQLITE</span>
+              </div>
+            </div>
+
             <div className="flex flex-col gap-16">
               <div className="group border-t border-white/20 pt-8">
                 <div className="flex justify-between items-baseline mb-4">
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">SILENT GUARDIAN</h3>
+                  <div className="flex items-center gap-4">
+                    <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">SILENT GUARDIAN</h3>
+                    <div className="flex gap-4">
+                      <a
+                        href="https://github.com/kumar-ayan/silent-guardian"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/40 hover:text-accent transition-colors"
+                        title="View on GitHub"
+                      >
+                        <SiGithub className="text-2xl md:text-3xl" />
+                      </a>
+                      <a
+                        href="https://silent-guardian-sage.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/40 hover:text-accent transition-colors"
+                        title="View Live Demo"
+                      >
+                        <FiExternalLink className="text-2xl md:text-3xl" />
+                      </a>
+                    </div>
+                  </div>
                   <span className="font-mono text-xs text-accent">2025</span>
                 </div>
                 <p className="text-xl max-w-2xl opacity-70 mb-6">
@@ -40,19 +91,6 @@ function App() {
                   <span className="border border-white px-2 py-1">PYTHON</span>
                   <span className="border border-white px-2 py-1">TENSORFLOW</span>
                   <span className="border border-white px-2 py-1">PRIVACY-FIRST</span>
-                </div>
-              </div>
-
-              <div className="group border-t border-white/20 pt-8">
-                <div className="flex justify-between items-baseline mb-4">
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">GITREE</h3>
-                  <span className="font-mono text-xs text-accent">2025</span>
-                </div>
-                <p className="text-xl max-w-2xl opacity-70 mb-6">
-                  A CLI tool to provide LLM context for coding project files into single file with number of different formats to choose from.
-                </p>
-                <div className="flex gap-4 font-mono text-xs">
-                  <span className="border border-white px-2 py-1">PYTHON</span>
                 </div>
               </div>
 

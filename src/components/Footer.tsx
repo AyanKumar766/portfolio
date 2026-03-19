@@ -11,7 +11,7 @@ export const Footer = () => {
                     <div className="flex flex-col gap-2">
                         <span className="text-white">PROJECTS</span>
                         <a href="https://github.com/kumar-ayan/Silent-Guardian" className="hover:text-accent transition-colors">GUARDIAN</a>
-                        <a href="#projects" className="hover:text-accent transition-colors">ASSISTANT</a>
+                        <a href="https://github.com/kumar-ayan/llmvc" className="hover:text-accent transition-colors">LLMVC</a>
                         <a href="#projects" className="hover:text-accent transition-colors">CLASSIFIER</a>
                     </div>
                     <div className="flex flex-col gap-2">

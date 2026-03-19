@@ -12,7 +12,7 @@ export const About = () => {
 
                 <div className="flex flex-col md:flex-row gap-12 md:gap-24">
                     <p className="text-xl md:text-2xl font-medium leading-relaxed max-w-2xl opacity-90">
-                        Second-year B.Tech Computer Science student with strong foundations in Data Structures & Algorithms (200+ problems solved across Easy–Hard) and hands-on experience building AI and full stack applications. Currently working on full stack applications and open source contributions.
+                        Second-year B.Tech Computer Science student with strong foundations in Data Structures & Algorithms (250+ problems solved across Easy–Hard) and hands-on experience building AI and full stack applications. Currently working on full stack applications and open source contributions.
                     </p>
 
                     <div className="flex flex-col gap-6 text-sm font-mono opacity-60">
