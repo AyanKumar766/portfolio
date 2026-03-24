@@ -2,6 +2,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
+import resumePdf from '../assets/Resume.pdf';
 
 const ParticleField = () => {
     const ref = useRef<THREE.Points>(null);
@@ -65,6 +66,20 @@ export const Hero = () => {
                     <span>AI ENGINEER</span>
                     <span>AVAILABLE FOR HIRE</span>
                 </div>
+            </div>
+
+            <div className="absolute top-6 right-6 md:top-8 md:right-8 z-50 group/btn">
+                <a 
+                    href={resumePdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 text-white font-mono text-xs md:text-sm tracking-widest transition-all duration-300 backdrop-blur-md rounded-none hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                >
+                    RESUME
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
             </div>
         </section>
     );
