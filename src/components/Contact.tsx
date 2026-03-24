@@ -2,25 +2,47 @@ import { useState, type FormEvent } from 'react';
 import { ArrowUpRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { Section } from './Section';
 
+const CONTACT_EMAIL = 'exoticayann@gmail.com';
+
+const sanitizeSingleLine = (value: string) => value.replace(/[\r\n]+/g, ' ').trim();
+
 export const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        website: '',
     });
-    const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+
+        if (formData.website.trim()) {
+            setStatus('idle');
+            return;
+        }
+
+        const name = sanitizeSingleLine(formData.name);
+        const email = sanitizeSingleLine(formData.email);
+        const message = formData.message.trim();
+
+        if (!name || !email || !message) {
+            setErrorMessage('Please complete every field before opening the email draft.');
+            setStatus('error');
+            return;
+        }
+
+        setErrorMessage('');
         setStatus('loading');
 
         try {
             const formDataToSend = new FormData();
-            // Use environment variable for the key, fallback to hardcoded if needed (though env is set)
             formDataToSend.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "3825446d-d67d-4ac5-bb49-22f501072ac4");
-            formDataToSend.append("name", formData.name);
-            formDataToSend.append("email", formData.email);
-            formDataToSend.append("message", formData.message);
+            formDataToSend.append("name", name);
+            formDataToSend.append("email", email);
+            formDataToSend.append("message", message);
 
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
@@ -31,17 +53,17 @@ export const Contact = () => {
 
             if (data.success) {
                 setStatus('success');
-                setFormData({ name: '', email: '', message: '' });
-                // Reset status after a delay
+                setFormData({ name: '', email: '', message: '', website: '' });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
                 console.error("Submission failed:", data);
-                setStatus('idle');
-                // You might want to handle error state visibly in UI later
+                setErrorMessage('Message submission failed. Please try again.');
+                setStatus('error');
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            setStatus('idle');
+            setErrorMessage('Unable to send message. Please use the direct email link instead.');
+            setStatus('error');
         }
     };
 
@@ -75,7 +97,7 @@ export const Contact = () => {
 
                             <div>
                                 <h3 className="font-mono text-xs mb-4 opacity-50">DIRECT EMAIL</h3>
-                                <a href="mailto:exoticayann@gmail.com" className="text-xl font-bold hover:text-accent transition-colors">exoticayann@gmail.com</a>
+                                <a href={`mailto:${CONTACT_EMAIL}`} className="text-xl font-bold hover:text-accent transition-colors">{CONTACT_EMAIL}</a>
                             </div>
                         </div>
                     </div>
@@ -91,12 +113,26 @@ export const Contact = () => {
                                 </div>
                             ) : (
                                 <>
+                                    <div className="sr-only" aria-hidden="true">
+                                        <label htmlFor="website">Website</label>
+                                        <input
+                                            type="text"
+                                            id="website"
+                                            tabIndex={-1}
+                                            autoComplete="off"
+                                            value={formData.website}
+                                            onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                                        />
+                                    </div>
+
                                     <div className="group">
                                         <label htmlFor="name" className="font-mono text-xs opacity-50 mb-2 block group-focus-within:text-accent transition-colors">NAME</label>
                                         <input
                                             type="text"
                                             id="name"
                                             required
+                                            maxLength={80}
+                                            autoComplete="name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             className="w-full bg-transparent border-b border-black/20 py-4 text-xl md:text-2xl font-bold focus:outline-none focus:border-accent transition-colors placeholder:text-black/20"
@@ -110,6 +146,8 @@ export const Contact = () => {
                                             type="email"
                                             id="email"
                                             required
+                                            maxLength={254}
+                                            autoComplete="email"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             className="w-full bg-transparent border-b border-black/20 py-4 text-xl md:text-2xl font-bold focus:outline-none focus:border-accent transition-colors placeholder:text-black/20"
@@ -123,12 +161,19 @@ export const Contact = () => {
                                             id="message"
                                             required
                                             rows={4}
+                                            maxLength={2000}
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                             className="w-full bg-transparent border-b border-black/20 py-4 text-xl md:text-2xl font-bold focus:outline-none focus:border-accent transition-colors resize-none placeholder:text-black/20"
                                             placeholder="Tell me about your project..."
                                         />
                                     </div>
+
+                                    {status === 'error' && (
+                                        <p className="text-sm text-red-600" role="alert">
+                                            {errorMessage}
+                                        </p>
+                                    )}
 
                                     <button
                                         type="submit"
