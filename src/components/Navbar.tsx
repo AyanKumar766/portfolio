@@ -38,7 +38,7 @@ export const Navbar = () => {
                         className="fixed inset-0 z-[60] bg-black text-white flex flex-col"
                     >
                         <div className="p-6 md:p-8 flex justify-between items-center border-b border-white/10">
-                            <span className="font-bold tracking-tighter text-2xl">ASORBIT</span>
+                            <span className="font-bold tracking-tighter text-2xl">PORTFOLIO</span>
                             <button
                                 onClick={() => setIsOpen(false)}
                                 className="p-3 hover:text-accent transition-colors"
